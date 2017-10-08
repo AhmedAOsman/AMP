@@ -1,0 +1,13 @@
+<launch>
+<!-- Get Data & Time -->
+<param name="start_time" command="date +'%d-%m-%Y_%Ih%Mm%S'"/>
+
+<!-- Entry point for using OpenNI devices -->
+    <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+      <arg name="rtabmap_args" value="--delete_db_on_start"/>
+      <arg name="rviz" value="true"/>
+      <arg name="rtabmapviz" value="false"/>
+      <arg name="database_path" value="~/maps/amp.db"/>
+    </include>
+</launch>
+

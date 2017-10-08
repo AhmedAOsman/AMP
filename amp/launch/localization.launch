@@ -1,0 +1,9 @@
+<launch>    
+    <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+      <arg name="rviz" value="true"/>
+      <arg name="rtabmapviz" value="false"/>
+      <arg name="localization" value="true"/>
+      <arg name="database_path" value="~/maps/amp.db"/>
+    </include>
+</launch>
+
