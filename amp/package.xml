@@ -2,12 +2,12 @@
 <package>
   <name>amp</name>
   <version>0.0.0</version>
-  <description>The amp package</description>
+  <description>The AMP package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="ros@todo.todo">ros</maintainer>
+  <maintainer email="ahmed.osman@sypron.com">Sypron</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
