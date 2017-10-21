@@ -1,0 +1,30 @@
+<launch>
+<!-- args -->
+    <arg name="file" default="/home/ros/rosbag/kinect_2017-10-21-12-56-05.bag" />
+    <arg name="rviz_cfg" default="$(find amp)/launch/config/point_cloud2.rviz" />
+    <arg name="rtab" default="false" />
+    <arg name="rtab_loco" default="false" />
+<!-- Set Time Param  -->
+    <rosparam>
+    use_sim_time: true
+    </rosparam>
+<!-- Kinect Drive  -->
+    <include file="$(find openni_launch)/launch/openni.launch">
+      <arg name="load_driver" value="false"/>
+    </include>
+<!-- Load RosBag -->
+    <node pkg="rosbag" type="play" name="rosbag_play" output="screen" args="--clock /$(arg file)" />
+<!-- Run RTAB -->
+<group if="$(arg rtab)">
+ <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+      <arg name="rtabmap_args" value="--delete_db_on_start"/>
+      <arg name="rtabmapviz" value="false"/>
+      <arg name="rviz" value="true"/>
+      <arg name="database_path" value="~/maps/amp.db"/>
+    </include>
+</group>
+<!-- Run RVIZ -->
+<group unless="$(arg rtab)">
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_cfg)"/>
+ </group>
+</launch>

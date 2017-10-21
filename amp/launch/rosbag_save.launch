@@ -1,0 +1,20 @@
+<launch>
+<!-- args -->
+  <arg name="record_kinect" default="true" />
+  <arg name="record_ZED" default="false" />
+  <arg name="file" default="/home/ros/rosbag/kinect.bag" />
+<!-- Create Folder -->
+<param name="mkdir_tmp" command="mkdir -p /home/ros/rosbag/" />
+<!-- Rviz Config  -->
+    <arg name="rviz_cfg" default="$(find amp)/launch/config/point_cloud2.rviz" />
+<!-- Kinect Drive  -->
+    <include file="$(find openni_launch)/launch/openni.launch">
+      <arg name="depth_registration" value="true"/>
+    </include>
+<!-- Record -->
+    <node pkg="rosbag" type="record" name="rosbag_record_cam" output="screen"
+ args="record camera/depth_registered/image_raw camera/depth_registered/camera_info camera/rgb/image_raw camera/rgb/camera_info -o $(arg file)"    
+    if="$(arg record_kinect)" />
+<!-- Run RVIZ -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_cfg)"/>
+</launch>

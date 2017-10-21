@@ -1,4 +1,9 @@
 <launch>    
+<!-- Kinect Drive  -->
+    <include file="$(find openni_launch)/launch/openni.launch">
+      <arg name="depth_registration" value="true"/>
+    </include>
+<!-- RTAB Localization  -->
     <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
       <arg name="rviz" value="true"/>
       <arg name="rtabmapviz" value="false"/>
