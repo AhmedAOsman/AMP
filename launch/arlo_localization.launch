@@ -1,0 +1,15 @@
+<launch>
+<!-- Args  -->
+<arg name="map_file" default="~/rtab_maps/1.yaml"/>
+
+<!-- Arlo Robot  -->
+ <include file="$(find arlobot_bringup)/launch/minimal.launch" />
+
+<!-- Load Map  -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+<!-- RTAB Mapping  -->
+    <include file="$(find rtabmap_ros)/launch/demo/demo_turtlebot_mapping.launch">
+       <arg name="database_path" value="~/rtab_maps/amp.db"/>
+    </include>
+</launch>

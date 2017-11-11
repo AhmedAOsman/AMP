@@ -1,5 +1,3 @@
 <launch>
-    <include file="$(find rtabmap_ros)/launch/demo/demo_turtlebot_rviz.launch">
-
-    </include>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find amp)/config/turtlebot_navigation.rviz"/>
 </launch>
