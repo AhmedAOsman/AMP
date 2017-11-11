@@ -2,18 +2,12 @@
 <!-- args -->
   <arg name="bag" default="false" />
 <!-- Arlo Robot  -->
- <include file="$(find oarlobot_bringup)/launch/minimal.launch"/>
-<!-- Kinect Drive  -->
-    <include file="$(find openni_launch)/launch/openni.launch">
-      <arg name="depth_registration" value="true"/>
-        <arg name="device_id" value="#2"/>
-    </include>
+ <include file="$(find arlobot_bringup)/launch/minimal.launch" />
+
 <!-- RTAB Mapping  -->
-    <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
-      <arg name="rviz" value="true"/>
-      <arg name="rtabmap_args" value="--delete_db_on_start"/>
-      <arg name="rtabmapviz" value="false"/>
-      <arg name="database_path" value="~/maps/amp.db"/>
+    <include file="$(find rtabmap_ros)/launch/demo/demo_turtlebot_mapping.launch">
+      <arg name="args" value="--delete_db_on_start"/>
+      <arg name="database_path" value="~/rtab_maps/amp.db"/>
     </include>
 </launch>
 
