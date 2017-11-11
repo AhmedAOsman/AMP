@@ -1,0 +1,5 @@
+<!-- Kinect Drive  -->
+    <include file="$(find openni_launch)/launch/openni.launch">
+      <arg name="depth_registration" value="true"/>
+        <arg name="device_id" value="#2"/>
+    </include>
