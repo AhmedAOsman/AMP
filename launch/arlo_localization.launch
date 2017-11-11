@@ -1,6 +1,6 @@
 <launch>
 <!-- Args  -->
-<arg name="map_file" default="~/rtab_maps/1.yaml"/>
+<arg name="map_file" default="/home/amp/rtab_maps/1.yaml"/>
 
 <!-- Arlo Robot  -->
  <include file="$(find arlobot_bringup)/launch/minimal.launch" />
