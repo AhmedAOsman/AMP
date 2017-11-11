@@ -10,7 +10,7 @@
 
 <!-- RTAB Mapping  -->
     <include file="$(find rtabmap_ros)/launch/demo/demo_turtlebot_mapping.launch">
-       <arg name="database_path" value="~/rtab_maps/amp.db"/>
+       <arg name="database_path" value="/home/amp/rtab_maps/amp.db"/>
        <arg name="localization" value="true"/>
     </include>
 </launch>
