@@ -1,6 +1,6 @@
 <launch>
 <!-- args -->
-    <arg name="file" default="/home/ros/rosbag/kinect_2017-10-21-12-56-05.bag" />
+    <arg name="file" default="/home/ros/rosbag/*.*" />
     <arg name="rviz_cfg" default="$(find amp)/launch/config/point_cloud2.rviz" />
     <arg name="rtab" default="false" />
     <arg name="rtab_loco" default="false" />
