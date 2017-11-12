@@ -8,9 +8,4 @@
        <arg name="map_file" value="/home/amp/rtab_maps/1.yaml"/>
 </include>
 
-<!-- RTAB Mapping  -->
-    <include file="$(find rtabmap_ros)/launch/demo/demo_turtlebot_mapping.launch">
-       <arg name="database_path" value="~/rtab_maps/amp.db"/>
-       <arg name="localization" value="true"/>
-    </include>
 </launch>
