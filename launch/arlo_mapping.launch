@@ -1,6 +1,7 @@
 <launch>
 <!-- args -->
   <arg name="bag" default="false" />
+  
 <!-- Arlo Robot  -->
  <include file="$(find arlobot_bringup)/launch/minimal.launch" />
 
