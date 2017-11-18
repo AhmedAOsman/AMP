@@ -5,7 +5,7 @@
 
 <!-- Load Map  -->
 <include file="$(find arlobot_navigation)/launch/amcl_demo.launch">
-       <arg name="map_file" value="/home/amp/rtab_maps/1.yaml"/>
+       <arg name="map_file" value="/home/ros/rtab_maps/1.yaml"/>
 </include>
 
 </launch>
