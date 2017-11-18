@@ -32,8 +32,8 @@ propeller board with SimpleIDE!!!
 #define MINIMUM_SPEED 50
 // THROTTLE_STOP determines how quickly the speed limit is changed.
 // Make this number bigger to cause the speed to change more slowly.
-#define INCREASE_THROTTLE_RATE 20
-#define DECREASE_THROTTLE_RATE 5
+#define INCREASE_THROTTLE_RATE 30
+#define DECREASE_THROTTLE_RATE 10
 
 // QUESTION: Does your robot have a 2nd Propeller "QuickStart" board where the PING sensors are connected?
 // #define hasQuickStartBoard
@@ -204,7 +204,7 @@ onto your Propeller Activity board!
 */
 
 // Maximum speed in ticks per second. Even if ROS asks us to go faster, we will not.
-#define MAXIMUM_SPEED 200 // Two TPS faster than what we are telling ROS is the maximum speed.
+#define MAXIMUM_SPEED 220 // Two TPS faster than what we are telling ROS is the maximum speed.
 // Use MotorReponseTesting.c if you want to test/adjust this,
 // And be sure to edit the ROS config files with the maximum linear (m/s) and angular (rad/s) velocity
 
