@@ -3,6 +3,6 @@
 <arg name="map_file" default="~/rtab_maps/1.yaml"/>
 
 <!-- Load Map  -->
-<node name="map_server" pkg="map_server" type="map_server" args="-f ~/rtab_maps/1.yaml" />
+<node  name="map_server" pkg="map_server" type="map_server"  args="-f /home/ros/rtab_maps/1.yaml" />
 
 </launch>
