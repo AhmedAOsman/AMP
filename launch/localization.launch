@@ -7,7 +7,7 @@
   
 <!-- RTAB Localization -->
     <include file="$(find arlobot_navigation)/launch/rtabmap_mapping.launch">
-      <arg name="database_path" value="~/rtab_maps/amp.db"/>
+      <arg name="database_path" value="~/rtab_maps/1.db"/>
       <arg name="localization" value="true"/>
     </include>  
 

@@ -33,7 +33,7 @@ propeller board with SimpleIDE!!!
 // THROTTLE_STOP determines how quickly the speed limit is changed.
 // Make this number bigger to cause the speed to change more slowly.
 #define INCREASE_THROTTLE_RATE 30
-#define DECREASE_THROTTLE_RATE 10
+#define DECREASE_THROTTLE_RATE 15
 
 // QUESTION: Does your robot have a 2nd Propeller "QuickStart" board where the PING sensors are connected?
 // #define hasQuickStartBoard
