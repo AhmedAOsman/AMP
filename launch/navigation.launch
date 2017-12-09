@@ -1,10 +1,15 @@
 <launch>
-
+<!-- args -->
+  <arg name="bag" default="false" />
+  
 <!-- Arlo Robot  -->
  <include file="$(find arlobot_bringup)/launch/minimal.launch" />
+  
+<!-- RTAB Localization -->
+    <include file="$(find amp)/rtabmap_mapping.launch">
+      <arg name="database_path" value="~/rtab_maps/1.db"/>
+      <arg name="localization" value="true"/>
+    </include>  
 
-<!-- Load Map  -->
-    <include file="$(find arlobot_navigation)/launch/amcl_demo.launch">
-       <arg name="map_file" value="/home/ros/rtab_maps/1.yaml"/>
-    </include>
+
 </launch>

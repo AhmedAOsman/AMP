@@ -13,6 +13,6 @@ install(DIRECTORY launch
 if (CATKIN_ENABLE_TESTING)
   # check that all launch file dependencies are declared correctly
   find_package(roslaunch REQUIRED)
-  find_package(arlobot_bringup REQUIRED)
   find_package(rtabmap_ros REQUIRED)
+  find_package(openni_launch REQUIRED)
 endif ()
