@@ -70,7 +70,8 @@
 	  <param name="Rtabmap/TimeThr"              type="string" value="700"/>
 	  <param name="Mem/RehearsalSimilarity"      type="string" value="0.30"/>
 
-   	 <param name="Grid/MaxObstacleHeight" type="double" value="2.0"/>
+	<!-- Obestecals Parameters -->   	 
+	<param name="Grid/MaxObstacleHeight" type="double" value="2.0"/>
 	 <param name="Grid/MaxGroundHeight" type="double" value="0.01" />
 	 <param name="Grid/FromDepth" type="string" value="true"/>
 

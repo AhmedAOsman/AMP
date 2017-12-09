@@ -4,7 +4,7 @@
   <arg name="record_ZED" default="false" />
   <arg name="file" default="/home/ros/rosbag/kinect.bag" />
 <!-- Create Folder -->
-<param name="mkdir_tmp" command="mkdir -p /home/ros/rosbag/" />
+    <param name="mkdir_tmp" command="mkdir -p /home/ros/rosbag/" />
 <!-- Rviz Config  -->
     <arg name="rviz_cfg" default="$(find amp)/launch/config/point_cloud2.rviz" />
 <!-- Kinect Drive  -->
