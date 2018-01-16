@@ -1,4 +1,0 @@
-After Arlobot Package installation
-- copy .arlobot to Home
-- copy arlobot & arlobot_apps & arlobot_viz to catkin_ws/src/ArloBot/src
-- copy PropellerCodeForArloBot catkin_ws/src/ArloBot/

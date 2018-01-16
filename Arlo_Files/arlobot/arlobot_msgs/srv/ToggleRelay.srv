@@ -1,6 +1,0 @@
-string relay
-bool state
----
-bool boardExists
-bool foundRelay
-bool toggleSuccess
