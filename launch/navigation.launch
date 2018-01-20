@@ -1,15 +1,15 @@
 <launch>
 <!-- args -->
-  <arg name="bag" default="false" />
+<arg name="bag" default="false" />
   
 <!-- Arlo Robot  -->
- <include file="$(find arlobot_bringup)/launch/minimal.launch" />
+<include file="$(find arlobot_bringup)/launch/minimal.launch" />
   
 <!-- RTAB Localization -->
-    <include file="$(find amp)/rtabmap_mapping.launch">
+<include file="$(find amp)/rtabmap_mapping.launch">
       <arg name="database_path" value="~/rtab_maps/1.db"/>
       <arg name="localization" value="true"/>
-    </include>  
+</include>  
 
 
 </launch>
