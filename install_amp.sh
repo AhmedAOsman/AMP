@@ -49,7 +49,7 @@ printf "\n${YELLOW}[Cloning or Updating git repositories]${NC}\n"
 cd ~/catkin_ws/src
 if ! [ -d ~/catkin_ws/src/slam_gmapping ]
     then
-    https://github.com/ros-perception/slam_gmapping.git
+    git clone https://github.com/ros-perception/slam_gmapping.git
 else
     cd ~/catkin_ws/src/slam_gmapping
     git pull
@@ -58,7 +58,7 @@ fi
 cd ~/catkin_ws/src
 if ! [ -d ~/catkin_ws/src/amp ]
     then
-    git https://github.com/sypronamp/amp.git
+    git clone https://github.com/sypronamp/amp.git
 else
     cd ~/catkin_ws/src/amp
     git pull
