@@ -1,13 +1,6 @@
 #!/bin/bash
-# ROS Kinetic "Workstation" Automated Install - credit goes to everyone
-# Blame goes to ChrisL8
-# This is to set up enough of ROS to use RVIZ and some other GUI tools,
-# on a secondary system. It will not run a robot.
+# AMP installation Patch 
 
-# Run this straight off of github like this:
-# bash <(wget -qO- --no-cache https://raw.githubusercontent.com/chrisl8/ArloBot/master/workstation.sh)
-
-BLACK='\033[0;30m'
 BLUE='\033[0;34m'
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
@@ -36,12 +29,6 @@ case ${version} in
 printf "${RED}[This script will only work on Ubuntu Wily (15.10) and Xenial (16.04)]${NC}\n"
 exit 1
 esac
-
-# I never use this, but if you are having time issues maybe uncomment this.
-#printf "${YELLOW}[Installing chrony and setting the ntpdate]${NC}\n"
-#sudo apt-get install -y chrony
-#sudo ntpdate ntp.ubuntu.com
-
 
 
 printf "\n${YELLOW}[Cloning or Updating git repositories]${NC}\n"
