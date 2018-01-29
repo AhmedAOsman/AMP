@@ -25,10 +25,6 @@ YELLOW='\033[1;33m'
 WHITE='\033[1;37m'
 NC='\033[0m' # NoColor
 
-printf "\n${YELLOW}SETTING UP ROS KINETIC FOR YOUR REMOTE WORK!${NC}\n"
-printf "${YELLOW}-------------------------------------------${NC}\n"
-printf "${GREEN}You will be asked for your password for running commands as root!${NC}\n"
-
 version=`lsb_release -sc`
 
 printf "\n${YELLOW}[Checking the Ubuntu version]${NC}\n"
@@ -46,36 +42,17 @@ esac
 #sudo apt-get install -y chrony
 #sudo ntpdate ntp.ubuntu.com
 
-if ! [ -e /etc/apt/sources.list.d/ros-latest.list ]
-    then
-    printf "${YELLOW}[Adding the ROS repository]${NC}\n"
-    # This should follow the official ROS install instructions closely.
-    # That is why there is a separate section for extra packages that I need for Arlo.
-    sudo sh -c "echo \"deb http://packages.ros.org/ros/ubuntu ${version} main\" > /etc/apt/sources.list.d/ros-latest.list"
-    printf "${BLUE}[Checking the ROS keys]${NC}\n"
-    roskey=`apt-key list | grep -i "ROS builder"`
-    if [ -z "$roskey" ]
-        then
-        printf "${BLUE}[Adding the ROS keys]${NC}\n"
-        sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116
-        printf "${BLUE}^^ He says it is 'OK'.${NC}\n"
-    fi
-fi
 
-
-if ! [ -d ~/catkin_ws/src ]
-    then
-    printf "\n${YELLOW}[Creating the catkin workspace and testing with catkin_make]${NC}\n"
-    mkdir -p ~/catkin_ws/src
-    cd ~/catkin_ws/src
-    catkin_init_workspace
-    cd ~/catkin_ws/
-    catkin_make
-    source ${HOME}/catkin_ws/devel/setup.bash
-    rospack profile
-fi
 
 printf "\n${YELLOW}[Cloning or Updating git repositories]${NC}\n"
+cd ~/catkin_ws/src
+if ! [ -d ~/catkin_ws/src/slam_gmapping ]
+    then
+    https://github.com/ros-perception/slam_gmapping.git
+else
+    cd ~/catkin_ws/src/slam_gmapping
+    git pull
+fi
 cd ~/catkin_ws/src
 if ! [ -d ~/catkin_ws/src/amp ]
     then
@@ -84,7 +61,7 @@ else
     cd ~/catkin_ws/src/amp
     git pull
 fi
-cd ~/catkin_ws/
+cd ~/catkin_ws
 
 catkin_make
 
