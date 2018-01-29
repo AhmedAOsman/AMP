@@ -45,6 +45,7 @@ esac
 
 
 printf "\n${YELLOW}[Cloning or Updating git repositories]${NC}\n"
+
 cd ~/catkin_ws/src
 if ! [ -d ~/catkin_ws/src/slam_gmapping ]
     then
@@ -53,6 +54,7 @@ else
     cd ~/catkin_ws/src/slam_gmapping
     git pull
 fi
+
 cd ~/catkin_ws/src
 if ! [ -d ~/catkin_ws/src/amp ]
     then
