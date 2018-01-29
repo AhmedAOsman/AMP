@@ -1,6 +1,6 @@
 # AMP
 
-1. First follow use this quick install patch by chrisl8 to install ROS and Arlobot files on the robot computer
+1. Use this quick install patch by chrisl8 to install ROS and Arlobot files on the robot computer
 ```
 bash <(wget -qO- --no-cache https://raw.githubusercontent.com/chrisl8/ArloBot/kinetic/setup-kinetic.sh)
 ```
@@ -8,7 +8,7 @@ bash <(wget -qO- --no-cache https://raw.githubusercontent.com/chrisl8/ArloBot/ki
 ```
 bash <(wget -qO- --no-cache https://raw.githubusercontent.com/sypronamp/amp/master/install_amp.sh)
 ```
-3. First follow use this quick install patch by chrisl8 to install ROS and Arlobot files on the Workstation
+3. Use this quick install patch by chrisl8 to install ROS and Arlobot files on the Workstation
 ```
 bash <(wget -qO- --no-cache https://raw.githubusercontent.com/chrisl8/ArloBot/kinetic/workstation-kinetic.sh)
 ```
