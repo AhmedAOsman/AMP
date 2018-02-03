@@ -63,7 +63,7 @@ if ! [ -d ~/catkin_ws/src/amp ]
     printf "\n${RED}[AMP package is not installted ! Please try to install it manualy]${NC}\n"
 else
     cd ~/catkin_ws/src/amp
-    unzip AMP_files_update.zip -d ~/test/
+    unzip -o files.zip -d ~/test/
 fi
 cd ~/catkin_ws
 
