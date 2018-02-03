@@ -1,6 +1,6 @@
 # AMP
 
-#Robot Computer
+**#Robot Computer
 
 1. Use this quick install patch by chrisl8 to install ROS and Arlobot Packages
 ```
@@ -16,7 +16,7 @@ bash <(wget -qO- --no-cache https://raw.githubusercontent.com/sypronamp/amp/mast
 - copy arlobot & arlobot_apps & arlobot_viz to catkin_ws/src/ArloBot/src
 - copy PropellerCodeForArloBot catkin_ws/src/ArloBot/
 ```
-#Workstation Computer
+**#Workstation Computer
 
 1. Use this quick install patch by chrisl8 to install ROS and Arlobot files on the 
 ```
