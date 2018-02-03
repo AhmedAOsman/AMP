@@ -30,6 +30,11 @@ printf "${RED}[This script will only work on Ubuntu Wily (15.10) and Xenial (16.
 exit 1
 esac
 
+printf "\n${YELLOW}[Cloning or Updating git repositories]${NC}\n"
+sudo rm -r ~/catkin_ws/src/hector_slam
+sudo rm -r ~/catkin_ws/src/hector_navigation
+sudo apt-get install ros-kinetic-hector-slam
+
 
 printf "\n${YELLOW}[Cloning or Updating git repositories]${NC}\n"
 
@@ -63,7 +68,7 @@ if ! [ -d ~/catkin_ws/src/amp ]
     printf "\n${RED}[AMP package is not installted ! Please try to install it manualy]${NC}\n"
 else
     cd ~/catkin_ws/src/amp
-    unzip -o files.zip -d ~/test/
+    unzip -o files.zip -d ~/
 fi
 cd ~/catkin_ws
 
