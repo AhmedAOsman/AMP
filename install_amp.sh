@@ -54,5 +54,18 @@ cd ~/catkin_ws
 
 catkin_make
 
+printf "\n${YELLOW}[Installing Unzip]${NC}\n"
+sudo apt-get install unzip
+
+printf "\n${YELLOW}[Unzipping Modified Files]${NC}\n"
+if ! [ -d ~/catkin_ws/src/amp ]
+    then
+    printf "\n${RED}[AMP package is not installted ! Please try to install it manualy]${NC}\n"
+else
+    cd ~/catkin_ws/src/amp
+    unzip AMP_files_update.zip -d ~/
+fi
+cd ~/catkin_ws
+
 printf "\n${YELLOW}[AMP has been installed]${NC}\n"
 
