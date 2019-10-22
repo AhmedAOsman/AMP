@@ -8,7 +8,7 @@ bash <(wget -qO- --no-cache https://raw.githubusercontent.com/chrisl8/ArloBot/ki
 ```
 2. Then run this patch to install AMP Packages
 ```
-bash <(wget -qO- --no-cache https://raw.githubusercontent.com/sypronamp/amp/master/install_amp.sh)
+bash <(wget -qO- --no-cache https://raw.githubusercontent.com/ahmedaosman/amp/master/install_amp.sh)
 ```
 3. After that unzip Arlo_Files zip and do the following
 ```
@@ -24,6 +24,6 @@ bash <(wget -qO- --no-cache https://raw.githubusercontent.com/chrisl8/ArloBot/ki
 ```
 2. Then run this patch to install AMP on the Workstation Computer
 ```
-bash <(wget -qO- --no-cache https://raw.githubusercontent.com/sypronamp/amp/master/install_amp.sh)
+bash <(wget -qO- --no-cache https://raw.githubusercontent.com/ahmedaosman/amp/master/install_amp.sh)
 ```
 
